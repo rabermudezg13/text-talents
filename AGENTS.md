@@ -1,0 +1,2 @@
+# Project maintenance
+Read memory.md before changes. Record a plan and acceptance tests before implementing. Preserve local processing, privacy, 180-row maximum and explicit review. Test changes with npm test and npm run build; use synthetic contacts only. Document every change in CHANGELOG.md and update memory.md after each task, distinguishing local verification from deployment. Never add customer workbooks, secrets or contacts to Git or logs.
