@@ -17,3 +17,5 @@ Add an initially expanded, collapsible English quick-start guide directly under 
 - Scope update requested by user: Area or schools and Sender or team start empty. Prompt uses explicit placeholders when missing instead of inserting a team. Include this change with the usage guide; validate defaults in browser and prompt fallback in existing regression.
 
 - Local validation: seven regressions PASS, strict TypeScript/build PASS. Browser shows six-step guide expanded; collapsing it preserves form controls. Area and Sender empty; prompt placeholders verified. Production original app observed deployed by owner; guide/default update pending publication.
+
+- Final user steering: top eyebrow now OUTREACH STUDIO only; creator/company credit remains in footer. Previous guide/defaults commit 036ce51f9946771fa3f02334ad29c9c85bfe7eaa published; final header revision pending verification/deploy.

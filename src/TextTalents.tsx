@@ -46,7 +46,7 @@ export default function TextTalents() {
   const copy=async()=>{try{await navigator.clipboard.writeText(prompt);setCopyStatus('Prompt copied. Paste it into your preferred AI.')}catch{promptRef.current?.focus();promptRef.current?.select();setCopyStatus('Select and copy the prompt below with Ctrl+C or ⌘C.')}}
   const field=(key:keyof Campaign,value:string)=>{setCampaign(old=>({...old,[key]:value}));setCopyStatus('')}
   return <div className="text-talents">
-    <header><div><p className="tt-eyebrow">CAFE CULTURA LLC · OUTREACH STUDIO</p><h1>Text Talents<span className="tt-title-dot">.</span></h1><p>Your next great connection starts here.</p></div><span className="tt-local"><span aria-hidden="true">●</span> Private by design · local processing</span></header>
+    <header><div><p className="tt-eyebrow">OUTREACH STUDIO</p><h1>Text Talents<span className="tt-title-dot">.</span></h1><p>Your next great connection starts here.</p></div><span className="tt-local"><span aria-hidden="true">●</span> Private by design · local processing</span></header>
     <div className="tt-intro"><p>One workbook. Ready-to-use lists.</p><span>Excel → Review → CSVs of 180 → Better outreach</span></div>
     <details className="tt-guide" open>
       <summary>How to use Text Talents <span>Quick start · 6 steps</span></summary>
