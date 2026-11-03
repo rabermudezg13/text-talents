@@ -19,3 +19,6 @@ Add an initially expanded, collapsible English quick-start guide directly under 
 - Local validation: seven regressions PASS, strict TypeScript/build PASS. Browser shows six-step guide expanded; collapsing it preserves form controls. Area and Sender empty; prompt placeholders verified. Production original app observed deployed by owner; guide/default update pending publication.
 
 - Final user steering: top eyebrow now OUTREACH STUDIO only; creator/company credit remains in footer. Previous guide/defaults commit 036ce51f9946771fa3f02334ad29c9c85bfe7eaa published; final header revision pending verification/deploy.
+
+## 2026-11-03 — Guide/defaults/header completed
+Published revisions 036ce51f9946771fa3f02334ad29c9c85bfe7eaa and 7e096ef29d486cb549aaf67763f8fb8d3a0c4eca. Seven tests + strict TS/build PASS; GitHub CI success on both commits. https://text-talents.vercel.app returns 200 and serves exact build asset names index-Dy9dEtFh.js / index-DCFOvd9p.css. Production browser confirms OUTREACH STUDIO, six-step guide expanded, Area empty=true and Sender empty=true. Local guide collapse preserves form controls. Creator footer retained; no Kelly App code/data/config changes. Screenshot outputs/text-talents-guide-live.png contains no customer data. User completed Vercel reauthentication; prior pending publication state is resolved.

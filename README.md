@@ -34,4 +34,7 @@ Adapted from the owner-authorized Text Talents module in rabermudezg13/kelly-app
 Read AGENTS.md and memory.md before maintenance. Track changes in CHANGELOG.md.
 
 ## Publication status (2026-11-03)
-Source: https://github.com/rabermudezg13/text-talents (public). App implementation 137a70c4a7f3a697e9df9b2188651ef13ceee1bf. Vercel deployment awaits the owner’s account reauthentication; no live app URL has been verified yet.
+Live app: https://text-talents.vercel.app/  
+Public source: https://github.com/rabermudezg13/text-talents
+
+Usage guide and blank area/sender defaults: 036ce51f9946771fa3f02334ad29c9c85bfe7eaa. Simplified Outreach Studio header: 7e096ef29d486cb549aaf67763f8fb8d3a0c4eca. CI succeeded and the production browser/assets were verified for this revision. Creator credit remains in the footer.
