@@ -32,3 +32,6 @@ Deploy as a Vite app on Vercel: build `npm run build`, output `dist`. No environ
 Adapted from the owner-authorized Text Talents module in rabermudezg13/kelly-app-v2. This is an independent codebase and deployment; it does not change Kelly App.
 
 Read AGENTS.md and memory.md before maintenance. Track changes in CHANGELOG.md.
+
+## Publication status (2026-11-03)
+Source: https://github.com/rabermudezg13/text-talents (public). App implementation 137a70c4a7f3a697e9df9b2188651ef13ceee1bf. Vercel deployment awaits the owner’s account reauthentication; no live app URL has been verified yet.

@@ -7,3 +7,6 @@
 - Seven core/workbook regressions PASS; strict TypeScript and production build PASS. Browser: auto-detection on bilingual headers, custom manual mapping, review reset, two actual CSV downloads (180 + 1) independently parsed, prompt clipboard copy. Physical mobile/Sense import not tested.
 - Sender branding is editable, with no hardcoded Kelly company in the prompt.
 - Deployment pending.
+
+## Publication follow-up — 2026-11-03
+Implementation commit 137a70c4a7f3a697e9df9b2188651ef13ceee1bf published on public main. Seven local tests/strict TS/build PASS; browser automatic and manual mapping, 180+1 actual CSVs, clipboard and final creator credit verified. Kelly App files unchanged by this task. Vercel MCP returned create-project 403; existing GitHub sign-in opened the normal import flow in Rodrigo Bermudez’s projects, but Deploy requires email reauthentication. Verification requested through normal Vercel UI; owner must complete it before deployment can proceed. No production app URL claimed. Source CI configured; remote CI status not yet verified.
