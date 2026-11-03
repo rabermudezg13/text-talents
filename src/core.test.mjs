@@ -45,6 +45,7 @@ test('prompt uses verified campaign details, date and CTA without receiving cont
  const prompt=campaignPrompt({date:'2026-10-26',location:'Demo Area',sender:'Demo Team',language:'English',tone:'Friendly',details:'Grades K–5',cta:'Reply YES for help finding work.'})
  assert.match(prompt,/Monday, October 26, 2026/);assert.match(prompt,/Reply YES/);assert.match(prompt,/240 characters/);assert.match(prompt,/Do not invent pay/);assert.match(prompt,/Do not request or include a contact list/)
  assert.ok(!prompt.includes('3055550101'));assert.match(campaignPrompt({date:'',location:'',sender:'',language:'',tone:'',details:'',cta:''}),/\[WORK DATE\]/)
+ assert.match(campaignPrompt({date:'',location:'',sender:'',language:'',tone:'',details:'',cta:''}),/Sender\/team: \[SENDER OR TEAM\]/)
 })
 test('different workbook headers support English/Spanish aliases and manual fallback',()=>{
  for(const phone of ['Phone Number','Mobile Phone Number','Teléfono','Número de teléfono','Celular']) {

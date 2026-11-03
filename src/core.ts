@@ -44,7 +44,7 @@ export function campaignPrompt(c: Campaign) {
   const date = /^\d{4}-\d{2}-\d{2}$/.test(c.date) ? new Date(c.date + 'T12:00:00').toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}) : '[WORK DATE]'
   return `Write 3 SMS invitation options for substitute teachers to pick up work on ${date}.
 Output language: ${c.language || 'English'}. Tone: ${c.tone || 'Warm and encouraging'}.
-Sender/team: ${c.sender.trim() || 'Your recruiting team'}.
+Sender/team: ${c.sender.trim() || '[SENDER OR TEAM]'}.
 Area/schools: ${c.location.trim() || '[AREA OR SCHOOLS]'}.
 Verified details: ${c.details.trim() || 'No additional details supplied.'}
 Call to action: ${c.cta.trim() || 'Reply YES if you are available and our team will help you find an assignment.'}

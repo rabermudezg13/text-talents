@@ -9,7 +9,7 @@ export default function TextTalents() {
   const [rows,setRows]=useState<unknown[][]>([]), [header,setHeader]=useState(1), [nameColumn,setNameColumn]=useState(-1), [phoneColumn,setPhoneColumn]=useState(-1)
   const [busy,setBusy]=useState(false), [error,setError]=useState(''), [dedupe,setDedupe]=useState(true), [countryCode,setCountryCode]=useState(false), [reviewed,setReviewed]=useState(false)
   const [downloaded,setDownloaded]=useState<number[]>([]), [copyStatus,setCopyStatus]=useState('')
-  const [campaign,setCampaign]=useState<Campaign>({date:today(),location:'Miami-Dade',sender:'Your recruiting team',language:'English',tone:'Warm and encouraging',details:'',cta:'Reply YES if you are available and our team will help you find an assignment.'})
+  const [campaign,setCampaign]=useState<Campaign>({date:today(),location:'',sender:'',language:'English',tone:'Warm and encouraging',details:'',cta:'Reply YES if you are available and our team will help you find an assignment.'})
   const generation=useRef(0), promptRef=useRef<HTMLTextAreaElement>(null)
   useEffect(()=>()=>{generation.current++},[])
   const headers=rows[header-1]||[]
@@ -48,6 +48,17 @@ export default function TextTalents() {
   return <div className="text-talents">
     <header><div><p className="tt-eyebrow">CAFE CULTURA LLC · OUTREACH STUDIO</p><h1>Text Talents<span className="tt-title-dot">.</span></h1><p>Your next great connection starts here.</p></div><span className="tt-local"><span aria-hidden="true">●</span> Private by design · local processing</span></header>
     <div className="tt-intro"><p>One workbook. Ready-to-use lists.</p><span>Excel → Review → CSVs of 180 → Better outreach</span></div>
+    <details className="tt-guide" open>
+      <summary>How to use Text Talents <span>Quick start · 6 steps</span></summary>
+      <ol>
+        <li><h3>Open your Excel</h3><p>Click <strong>Open Excel</strong> and choose an .xlsx or .xls file under 20 MB. Your file is processed in this browser; it is not uploaded.</p></li>
+        <li><h3>Choose the right columns</h3><p>Select your <strong>Worksheet</strong> and <strong>Header row</strong>. We look for headers such as Name, Phone Number, Mobile or Teléfono. If they are not detected, choose the <strong>Name column</strong> and <strong>Phone column</strong> yourself.</p></li>
+        <li><h3>Review your contacts</h3><p>Check the preview and expand <strong>Review skipped rows</strong> if shown. Fix missing names or invalid US phone numbers in Excel and reopen the file. Choose whether to remove duplicate phones or include country code 1, then check the review confirmation.</p></li>
+        <li><h3>Download each CSV</h3><p>Click <strong>Download CSV</strong> for each batch. Files contain only Name and Phone, with at most 180 contacts per CSV. For example, 181 contacts become two files: 180 + 1. Files go to your browser’s download location.</p></li>
+        <li><h3>Create your message</h3><p>Set the work date, area, sender, language, tone, verified details and call to action. Click <strong>Copy prompt</strong>, paste it into your preferred AI and review its SMS suggestions. If copying is blocked, select the prompt and press Ctrl+C or ⌘C.</p></li>
+        <li><h3>Use your lists in Sense</h3><p>Import each CSV into Sense and map Name and Phone to your account’s fields. Review recipients and the final message before sending there. Text Talents does not send texts. Use <strong>Clear workbook</strong> when finished; refreshing or closing this tab also clears the working list.</p></li>
+      </ol>
+    </details>
     <div className="tt-columns">
       <section className="tt-card" aria-labelledby="tt-csv-title"><h2 id="tt-csv-title"><span className="tt-step">01</span> Prepare your lists</h2><p>Open Excel, review names and phones, then download batches of up to {BATCH_LIMIT} contacts. Every CSV contains only Name and Phone.</p>
         <div className="tt-actions"><label className="tt-upload">Open Excel<input aria-label="Open Excel workbook" type="file" accept=".xlsx,.xls" onChange={e=>{const file=e.target.files?.[0];e.target.value='';if(file)void load(file)}} /></label><button type="button" onClick={reset}>Clear workbook</button></div>
